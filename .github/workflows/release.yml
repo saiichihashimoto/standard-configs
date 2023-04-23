@@ -21,8 +21,7 @@ jobs:
 
       - run: npm run build -- --force --no-cache
 
-      - name: Release
-        env:
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release --dry-run
