@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@configs/prettier-plugin-package-json",
+  "version": "0.0.0-development",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "npm run build -- --no-dts"
+  },
+  "devDependencies": {
+    "@configs/config": "0.0.0-development",
+    "@configs/plugin-json": "0.0.0-development",
+    "@configs/prettier-plugin-ava": "0.0.0-development",
+    "@configs/prettier-plugin-babel": "0.0.0-development",
+    "@configs/prettier-plugin-eslint": "0.0.0-development",
+    "@configs/prettier-plugin-git-hooks": "0.0.0-development",
+    "@configs/prettier-plugin-prettier": "0.0.0-development",
+    "@configs/prettier-plugin-semantic-release": "0.0.0-development",
+    "@configs/prettier-plugin-tsup": "0.0.0-development",
+    "@configs/tsconfig": "0.0.0-development",
+    "prettier": "2.8.7"
+  },
+  "peerDependencies": {
+    "prettier": "^2.8.4"
+  }
+}

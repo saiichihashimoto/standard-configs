@@ -1,0 +1,30 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: "Updates"
+on:
+  schedule:
+    - cron: "0 12 * * *"
+
+jobs:
+  npm-check-updates:
+    name: NPM Check Updates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v3.6.0
+        with:
+          node-version-file: "package.json"
+          cache: "npm"
+      - run: npm ci
+
+      # TODO https://github.com/raineorshine/npm-check-updates/issues/1277
+      - run: npx npm-check-updates
+      - run: npm install
+
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "fix(deps): npm-check-updates"
+          labels: automerge
+          assignees: saiichihashimoto
+          reviewers: saiichihashimoto

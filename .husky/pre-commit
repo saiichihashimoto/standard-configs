@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Our prettierrc uses this repo's own plugin, so we need to build it.
+npm run build -- --filter=prettier-plugin
+
+npx lint-staged --shell --verbose

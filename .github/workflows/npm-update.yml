@@ -1,0 +1,29 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: "Updates"
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  npm-update:
+    name: NPM Update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v3.6.0
+        with:
+          node-version-file: "package.json"
+          cache: "npm"
+      - run: npm ci
+
+      - run: npm update
+      - run: npm install
+
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "fix(deps): npm update"
+          labels: automerge
+          assignees: saiichihashimoto
+          reviewers: saiichihashimoto

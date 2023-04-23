@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@configs/prettier-plugin-firebase",
+  "version": "0.0.0-development",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "npm run build -- --no-dts"
+  },
+  "devDependencies": {
+    "@configs/config": "0.0.0-development",
+    "@configs/plugin-json": "0.0.0-development",
+    "@configs/tsconfig": "0.0.0-development",
+    "prettier": "2.8.7"
+  },
+  "peerDependencies": {
+    "prettier": "^2.8.4"
+  }
+}
