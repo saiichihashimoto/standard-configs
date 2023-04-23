@@ -7,6 +7,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -16,11 +20,15 @@ jobs:
           cache: "npm"
       - run: npm ci
 
-      - run: npm run build -- --force --no-cache
+      - run: npm run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
