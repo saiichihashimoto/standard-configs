@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "dev": "npm run build -- --no-dts"
+    "dev": "npm run build -- --no-dts",
+    "release": "npx semantic-release --debug --dry-run"
   },
   "devDependencies": {
     "@configs/plugin": "0.0.0-development",

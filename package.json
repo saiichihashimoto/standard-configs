@@ -15,6 +15,7 @@
     "prepare": "is-ci || concurrently --timings --prefix-colors \"auto\" npm:prepare:*",
     "prepare:brew": "brew bundle",
     "prepare:husky": "husky install",
+    "release": "cross-env FORCE_COLOR=1 turbo run release --continue",
     "test": "jest"
   },
   "dependencies": {
