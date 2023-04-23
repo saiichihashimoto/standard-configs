@@ -22,7 +22,7 @@ jobs:
           cache: "npm"
       - run: npm ci
 
-      - run: npm run build -- --force --no-cache
+      - run: npm run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
