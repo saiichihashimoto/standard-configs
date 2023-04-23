@@ -7,6 +7,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/node_modules/.cache/turbo
+            ~/packages/*/.turbo
+          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -21,6 +27,12 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/node_modules/.cache/turbo
+            ~/packages/*/.turbo
+          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -35,6 +47,12 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/node_modules/.cache/turbo
+            ~/packages/*/.turbo
+          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
