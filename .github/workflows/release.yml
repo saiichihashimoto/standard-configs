@@ -13,8 +13,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ~/node_modules/.cache/turbo
-            ~/packages/*/.turbo
+            node_modules/.cache/turbo
+            packages/*/.turbo
           key: build-cache
       - uses: actions/checkout@v3
         with:
