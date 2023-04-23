@@ -22,7 +22,7 @@ jobs:
       - run: npx npm-check-updates
       - run: npm install
 
-      - uses: peter-evans/create-pull-request@v4
+      - uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "fix(deps): npm-check-updates"
           labels: automerge
