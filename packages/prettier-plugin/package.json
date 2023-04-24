@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "npm run build -- --no-dts",
-    "release": "npx semantic-release --debug --dry-run"
+    "release": "npx semantic-release"
   },
   "devDependencies": {
     "@configs/plugin": "0.0.0-development",

@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "npm run build -- --no-dts",
-    "release": "npx semantic-release --debug --dry-run"
+    "release": "npx semantic-release"
   },
   "dependencies": {
     "git-hooks-list": "3.1.0"
