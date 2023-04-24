@@ -5,10 +5,18 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
     steps:
       - uses: actions/cache@v3
         with:
@@ -16,8 +24,6 @@ jobs:
           key: build-cache
       - uses: actions/checkout@v3
         with:
-          # https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/ci-configurations/github-actions.md#pushing-packagejson-changes-to-a-master-branch
-          persist-credentials: false
           submodules: recursive
       - uses: actions/setup-node@v3.6.0
         with:
