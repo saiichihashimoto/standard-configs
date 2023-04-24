@@ -18,10 +18,6 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/cache@v3
-        with:
-          path: node_modules/.cache/turbo
-          key: build-cache
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -31,6 +27,10 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - run: npm ci
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: build-cache
 
       - run: npm run build
 
