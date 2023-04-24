@@ -37,4 +37,4 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx multi-semantic-release --debug --ignore-private-packages --sequential-init
+        run: npx multi-semantic-release --debug --ignore-private-packages
