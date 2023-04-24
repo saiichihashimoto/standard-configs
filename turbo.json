@@ -14,9 +14,6 @@
     },
     "dev": {
       "persistent": true
-    },
-    "release": {
-      "cache": false
     }
   }
 }

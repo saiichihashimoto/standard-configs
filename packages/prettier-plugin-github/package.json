@@ -2,12 +2,12 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@configs/prettier-plugin-github",
   "version": "0.0.0-development",
+  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "dev": "npm run build -- --no-dts",
-    "release": "npx semantic-release"
+    "dev": "npm run build -- --no-dts"
   },
   "dependencies": {
     "toposort": "2.0.2"
