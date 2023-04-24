@@ -1,6 +1,11 @@
 import { type Plugin, doc } from "prettier";
 
-import { type Stack, keyByType, plugin, processStack } from "@configs/plugin";
+import {
+  type Stack,
+  keyByType,
+  plugin,
+  processStack,
+} from "@standard-configs/plugin";
 
 type Point = {
   column: number;

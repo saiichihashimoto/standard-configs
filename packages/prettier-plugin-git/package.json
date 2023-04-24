@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@configs/prettier-plugin-git",
+  "name": "@standard-configs/prettier-plugin-git",
   "version": "0.0.0-development",
   "private": true,
   "main": "dist/index.js",
@@ -10,10 +10,10 @@
     "dev": "npm run build -- --no-dts"
   },
   "devDependencies": {
-    "@configs/config": "0.0.0-development",
-    "@configs/plugin-ignore": "0.0.0-development",
-    "@configs/prettier-plugin-babel": "0.0.0-development",
-    "@configs/tsconfig": "0.0.0-development",
+    "@standard-configs/config": "0.0.0-development",
+    "@standard-configs/plugin-ignore": "0.0.0-development",
+    "@standard-configs/prettier-plugin-babel": "0.0.0-development",
+    "@standard-configs/tsconfig": "0.0.0-development",
     "prettier": "2.8.7"
   },
   "peerDependencies": {

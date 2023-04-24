@@ -1,7 +1,7 @@
 import { filter, flow } from "lodash/fp";
 import { z } from "zod";
 
-import { elementsZod, sortAndUniqBy } from "@configs/config";
+import { elementsZod, sortAndUniqBy } from "@standard-configs/config";
 
 import { ignorePlugin } from ".";
 import { formatIgnore } from "./test-utils";

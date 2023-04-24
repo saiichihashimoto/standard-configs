@@ -6,9 +6,9 @@ import {
   indexOf,
   nestConfig,
   sortAndUniqBy,
-} from "@configs/config";
-import { jsonPlugin } from "@configs/plugin-json";
-import { compilerOptionsConfig } from "@configs/prettier-plugin-tsconfig";
+} from "@standard-configs/config";
+import { jsonPlugin } from "@standard-configs/plugin-json";
+import { compilerOptionsConfig } from "@standard-configs/prettier-plugin-tsconfig";
 
 export const tsupConfig: Config = {
   operations: [

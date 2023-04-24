@@ -1,6 +1,6 @@
-import { formatIgnore } from "@configs/plugin-ignore/src/test-utils";
-import { formatJSON } from "@configs/plugin-json/src/test-utils";
-import { formatYAML } from "@configs/plugin-yaml/src/test-utils";
+import { formatIgnore } from "@standard-configs/plugin-ignore/src/test-utils";
+import { formatJSON } from "@standard-configs/plugin-json/src/test-utils";
+import { formatYAML } from "@standard-configs/plugin-yaml/src/test-utils";
 
 import * as plugin from ".";
 

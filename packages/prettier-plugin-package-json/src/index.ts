@@ -7,21 +7,21 @@ import {
   indexOf,
   nestConfig,
   sortAndUniqBy,
-} from "@configs/config";
-import { jsonPlugin } from "@configs/plugin-json";
-import { avaConfig } from "@configs/prettier-plugin-ava";
-import { babelConfig } from "@configs/prettier-plugin-babel";
+} from "@standard-configs/config";
+import { jsonPlugin } from "@standard-configs/plugin-json";
+import { avaConfig } from "@standard-configs/prettier-plugin-ava";
+import { babelConfig } from "@standard-configs/prettier-plugin-babel";
 import {
   eslintConfig,
   eslintIgnoreConfig,
-} from "@configs/prettier-plugin-eslint";
+} from "@standard-configs/prettier-plugin-eslint";
 import {
   huskyConfig,
   simpleGitHooksConfig,
-} from "@configs/prettier-plugin-git-hooks";
-import { prettierConfig } from "@configs/prettier-plugin-prettier";
-import { semanticReleaseConfig } from "@configs/prettier-plugin-semantic-release";
-import { tsupConfig } from "@configs/prettier-plugin-tsup";
+} from "@standard-configs/prettier-plugin-git-hooks";
+import { prettierConfig } from "@standard-configs/prettier-plugin-prettier";
+import { semanticReleaseConfig } from "@standard-configs/prettier-plugin-semantic-release";
+import { tsupConfig } from "@standard-configs/prettier-plugin-tsup";
 
 const packageConfig: Config = {
   operations: [

@@ -26,8 +26,8 @@ const getLocalDeps = async (
     ...dependencies,
     ...devDependencies,
   })
-    .filter((dep) => dep.startsWith("@configs/"))
-    .map((dep) => dep.replace("@configs/", ""));
+    .filter((dep) => dep.startsWith("@standard-configs/"))
+    .map((dep) => dep.replace("@standard-configs/", ""));
 
   return [
     ...new Set([
@@ -53,7 +53,7 @@ export default defineConfig(
   }) => ({
     entry: ["src/index.ts"],
     dts: true,
-    noExternal: ["@configs"],
+    noExternal: ["@standard-configs"],
     skipNodeModulesBundle: true,
     watch:
       dts === false

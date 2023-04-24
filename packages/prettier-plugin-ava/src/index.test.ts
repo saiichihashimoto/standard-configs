@@ -1,4 +1,4 @@
-import { formatJSON } from "@configs/plugin-json/src/test-utils";
+import { formatJSON } from "@standard-configs/plugin-json/src/test-utils";
 
 import * as plugin from ".";
 

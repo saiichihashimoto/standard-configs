@@ -1,6 +1,6 @@
-import { type Config, indexOf, nestConfig } from "@configs/config";
-import { jsonPlugin } from "@configs/plugin-json";
-import { babelConfig } from "@configs/prettier-plugin-babel";
+import { type Config, indexOf, nestConfig } from "@standard-configs/config";
+import { jsonPlugin } from "@standard-configs/plugin-json";
+import { babelConfig } from "@standard-configs/prettier-plugin-babel";
 
 export const avaConfig: Config = {
   operations: [

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@configs/monorepo",
+  "name": "@standard-configs/monorepo",
   "workspaces": [
     "@types/*",
     "packages/*"

@@ -1,4 +1,4 @@
-import { formatYAML } from "@configs/plugin-yaml/src/test-utils";
+import { formatYAML } from "@standard-configs/plugin-yaml/src/test-utils";
 
 import * as plugin from ".";
 

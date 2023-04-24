@@ -1,4 +1,4 @@
-# @configs
+# @standard-configs
 
 ## Sort Order
 

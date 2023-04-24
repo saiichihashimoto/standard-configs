@@ -23,7 +23,7 @@ import {
   type doc,
 } from "prettier";
 
-import { type Config, type PropertyWrapper } from "@configs/config";
+import { type Config, type PropertyWrapper } from "@standard-configs/config";
 
 export type Stack<
   Node,
@@ -226,12 +226,12 @@ export const plugin =
       parsers: mapValues(
         (parser) => ({
           ...parser,
-          astFormat: `@configs/${astFormat}`,
+          astFormat: `@standard-configs/${astFormat}`,
         }),
         parsers
       ),
       printers: {
-        [`@configs/${astFormat}`]: {
+        [`@standard-configs/${astFormat}`]: {
           ...originalPrinter,
           print: (...params) => {
             const [astPath, { filepath }] = params;

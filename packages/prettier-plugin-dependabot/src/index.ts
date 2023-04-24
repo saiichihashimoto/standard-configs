@@ -6,8 +6,8 @@ import {
   elementsZod,
   indexOf,
   sortAndUniqBy,
-} from "@configs/config";
-import { yamlPlugin } from "@configs/plugin-yaml";
+} from "@standard-configs/config";
+import { yamlPlugin } from "@standard-configs/plugin-yaml";
 
 const dependabotConfig: Config = {
   operations: [

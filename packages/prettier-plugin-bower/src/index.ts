@@ -1,5 +1,5 @@
-import { type Config, indexOf } from "@configs/config";
-import { jsonPlugin } from "@configs/plugin-json";
+import { type Config, indexOf } from "@standard-configs/config";
+import { jsonPlugin } from "@standard-configs/plugin-json";
 
 const bowerConfig: Config = {
   operations: [

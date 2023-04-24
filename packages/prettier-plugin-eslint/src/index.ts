@@ -8,12 +8,12 @@ import {
   indexOf,
   nestConfig,
   sortAndUniqBy,
-} from "@configs/config";
-import { mergePlugins } from "@configs/plugin";
-import { ignorePlugin } from "@configs/plugin-ignore";
-import { jsonPlugin } from "@configs/plugin-json";
-import { yamlPlugin } from "@configs/plugin-yaml";
-import { babelConfig } from "@configs/prettier-plugin-babel";
+} from "@standard-configs/config";
+import { mergePlugins } from "@standard-configs/plugin";
+import { ignorePlugin } from "@standard-configs/plugin-ignore";
+import { jsonPlugin } from "@standard-configs/plugin-json";
+import { yamlPlugin } from "@standard-configs/plugin-yaml";
+import { babelConfig } from "@standard-configs/prettier-plugin-babel";
 
 export const eslintIgnoreConfig: Config = {
   parsers: ["ignore"],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@configs/prettier-plugin-github",
+  "name": "@standard-configs/prettier-plugin-github",
   "version": "0.0.0-development",
   "private": true,
   "main": "dist/index.js",
@@ -13,9 +13,9 @@
     "toposort": "2.0.2"
   },
   "devDependencies": {
-    "@configs/config": "0.0.0-development",
-    "@configs/plugin-yaml": "0.0.0-development",
-    "@configs/tsconfig": "0.0.0-development",
+    "@standard-configs/config": "0.0.0-development",
+    "@standard-configs/plugin-yaml": "0.0.0-development",
+    "@standard-configs/tsconfig": "0.0.0-development",
     "@types/toposort": "2.0.3",
     "prettier": "2.8.7"
   },

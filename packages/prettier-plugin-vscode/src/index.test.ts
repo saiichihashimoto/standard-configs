@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string -- This is the correct syntax in a few vscode files */
-import { formatJSON } from "@configs/plugin-json/src/test-utils";
+import { formatJSON } from "@standard-configs/plugin-json/src/test-utils";
 
 import * as plugin from ".";
 

@@ -13,6 +13,6 @@
     "."
   ],
   "moduleNameMapper": {
-    "^@configs/([^/]*)$": "<rootDir>/packages/$1/src"
+    "^@standard-configs/([^/]*)$": "<rootDir>/packages/$1/src"
   }
 }

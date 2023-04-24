@@ -1,7 +1,7 @@
 import { sortBy } from "lodash/fp";
 import { z } from "zod";
 
-import { elementsZod } from "@configs/config";
+import { elementsZod } from "@standard-configs/config";
 
 import { yamlPlugin } from ".";
 import { formatYAML } from "./test-utils";

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@configs/plugin",
+  "name": "@standard-configs/plugin",
   "version": "0.0.0-development",
   "private": true,
   "main": "src/index.ts",
@@ -9,8 +9,8 @@
     "minimatch": "9.0.0"
   },
   "devDependencies": {
-    "@configs/config": "0.0.0-development",
-    "@configs/tsconfig": "0.0.0-development",
+    "@standard-configs/config": "0.0.0-development",
+    "@standard-configs/tsconfig": "0.0.0-development",
     "prettier": "2.8.7"
   },
   "peerDependencies": {

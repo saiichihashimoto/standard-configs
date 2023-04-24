@@ -7,8 +7,8 @@ import {
   indexOf,
   nestConfig,
   sortAndUniqBy,
-} from "@configs/config";
-import { jsonPlugin } from "@configs/plugin-json";
+} from "@standard-configs/config";
+import { jsonPlugin } from "@standard-configs/plugin-json";
 
 export const compilerOptionsConfig: Config = {
   operations: [

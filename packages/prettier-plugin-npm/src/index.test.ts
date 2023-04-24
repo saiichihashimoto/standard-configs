@@ -1,4 +1,4 @@
-import { formatIgnore } from "@configs/plugin-ignore/src/test-utils";
+import { formatIgnore } from "@standard-configs/plugin-ignore/src/test-utils";
 
 import * as plugin from ".";
 

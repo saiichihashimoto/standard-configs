@@ -6,8 +6,8 @@ import {
   type Operation,
   indexOf,
   nestConfig,
-} from "@configs/config";
-import { jsonPlugin } from "@configs/plugin-json";
+} from "@standard-configs/config";
+import { jsonPlugin } from "@standard-configs/plugin-json";
 
 const rootConfig: Config = {
   operations: [

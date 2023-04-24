@@ -8,8 +8,8 @@ import {
   indexOf,
   nestConfig,
   propertiesZod,
-} from "@configs/config";
-import { yamlPlugin } from "@configs/plugin-yaml";
+} from "@standard-configs/config";
+import { yamlPlugin } from "@standard-configs/plugin-yaml";
 
 const githubIssueTemplateConfig: Config = {
   operations: [

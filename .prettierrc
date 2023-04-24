@@ -3,12 +3,12 @@
   "pluginSearchDirs": false,
   "plugins": [
     "@trivago/prettier-plugin-sort-imports",
-    "@configs/prettier-plugin",
+    "@standard-configs/prettier-plugin",
     "prettier-plugin-sh"
   ],
   "quoteProps": "consistent",
   "importOrder": [
-    "^@configs/(.*)$",
+    "^@standard-configs/(.*)$",
     "^src/(.*)$",
     "^[./]"
   ],

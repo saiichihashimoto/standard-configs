@@ -6,11 +6,11 @@ import {
   elementsZod,
   indexOf,
   sortAndUniqBy,
-} from "@configs/config";
-import { mergePlugins } from "@configs/plugin";
-import { ignorePlugin } from "@configs/plugin-ignore";
-import { jsonPlugin } from "@configs/plugin-json";
-import { yamlPlugin } from "@configs/plugin-yaml";
+} from "@standard-configs/config";
+import { mergePlugins } from "@standard-configs/plugin";
+import { ignorePlugin } from "@standard-configs/plugin-ignore";
+import { jsonPlugin } from "@standard-configs/plugin-json";
+import { yamlPlugin } from "@standard-configs/plugin-yaml";
 
 export const prettierConfig: Config = {
   operations: [

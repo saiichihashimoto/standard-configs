@@ -4,7 +4,7 @@
     "plugins": [
         "@trivago/prettier-plugin-sort-imports",
         "prettier-plugin-sh",
-        "@configs/prettier-plugin"
+        "@standard-configs/prettier-plugin"
     ],
     "printWidth": 120,
     "trailingComma": "all",

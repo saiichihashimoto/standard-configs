@@ -16,7 +16,12 @@ import { doc } from "prettier";
 import originalPrinter from "prettier-raw/src/language-js/printer-estree-json";
 import { parsers } from "prettier/parser-babel";
 
-import { type Stack, keyByType, plugin, processStack } from "@configs/plugin";
+import {
+  type Stack,
+  keyByType,
+  plugin,
+  processStack,
+} from "@standard-configs/plugin";
 
 /* eslint-disable @typescript-eslint/no-use-before-define -- Recursive type definition */
 type JSONExpression =

@@ -12,7 +12,12 @@ import {
   type YamlUnistNode,
 } from "yaml-unist-parser";
 
-import { type Stack, keyByType, plugin, processStack } from "@configs/plugin";
+import {
+  type Stack,
+  keyByType,
+  plugin,
+  processStack,
+} from "@standard-configs/plugin";
 
 import * as originalPrinter from "./printer-yaml";
 import { injectablePrint } from "./printer-yaml";

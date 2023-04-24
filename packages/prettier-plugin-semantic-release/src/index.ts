@@ -1,7 +1,7 @@
-import { type Config, indexOf } from "@configs/config";
-import { mergePlugins } from "@configs/plugin";
-import { jsonPlugin } from "@configs/plugin-json";
-import { yamlPlugin } from "@configs/plugin-yaml";
+import { type Config, indexOf } from "@standard-configs/config";
+import { mergePlugins } from "@standard-configs/plugin";
+import { jsonPlugin } from "@standard-configs/plugin-json";
+import { yamlPlugin } from "@standard-configs/plugin-yaml";
 
 export const semanticReleaseConfig: Config = {
   operations: [

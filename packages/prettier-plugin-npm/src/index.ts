@@ -1,8 +1,12 @@
 import { flow, reject } from "lodash/fp";
 import { z } from "zod";
 
-import { type Config, elementsZod, sortAndUniqBy } from "@configs/config";
-import { ignorePlugin } from "@configs/plugin-ignore";
+import {
+  type Config,
+  elementsZod,
+  sortAndUniqBy,
+} from "@standard-configs/config";
+import { ignorePlugin } from "@standard-configs/plugin-ignore";
 
 const npmIgnoreConfig: Config = {
   parsers: ["ignore"],
