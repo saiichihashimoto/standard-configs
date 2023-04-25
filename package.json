@@ -51,7 +51,6 @@
     "multi-semantic-release": "3.0.2",
     "npm-check-updates": "16.10.9",
     "prettier-plugin-sh": "0.12.8",
-    "prettier-raw": "github:prettier/prettier#2.8.7",
     "ts-jest": "29.1.0",
     "ts-node": "10.9.1",
     "tsup": "6.7.0",
