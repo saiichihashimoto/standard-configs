@@ -15,15 +15,9 @@ import {
 } from "lodash/fp";
 import { Minimatch } from "minimatch";
 import { basename } from "path";
-import {
-  type AstPath,
-  type Plugin,
-  type Printer,
-  type SupportLanguage,
-  type doc,
-} from "prettier";
+import type { AstPath, Plugin, Printer, SupportLanguage, doc } from "prettier";
 
-import { type Config, type PropertyWrapper } from "@standard-configs/config";
+import type { Config, PropertyWrapper } from "@standard-configs/config";
 
 export type Stack<
   Node,

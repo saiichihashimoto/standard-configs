@@ -2,13 +2,8 @@ import { flow, keyBy, map, toPairs } from "lodash/fp";
 import { array as toposort } from "toposort";
 import { z } from "zod";
 
-import {
-  type Config,
-  type Operation,
-  indexOf,
-  nestConfig,
-  propertiesZod,
-} from "@standard-configs/config";
+import { indexOf, nestConfig, propertiesZod } from "@standard-configs/config";
+import type { Config, Operation } from "@standard-configs/config";
 import { yamlPlugin } from "@standard-configs/plugin-yaml";
 
 const githubIssueTemplateConfig: Config = {

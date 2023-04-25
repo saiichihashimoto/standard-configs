@@ -1,12 +1,8 @@
 import { flow, map, toPairs } from "lodash/fp";
 import { z } from "zod";
 
-import {
-  type Config,
-  type Operation,
-  indexOf,
-  nestConfig,
-} from "@standard-configs/config";
+import { indexOf, nestConfig } from "@standard-configs/config";
+import type { Config, Operation } from "@standard-configs/config";
 import { jsonPlugin } from "@standard-configs/plugin-json";
 
 const rootConfig: Config = {

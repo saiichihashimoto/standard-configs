@@ -1,6 +1,7 @@
 import { flow, identity, invert, sortBy, sortedUniqBy } from "lodash/fp";
-import { type SupportLanguage, type doc } from "prettier";
-import { type ZodType, z } from "zod";
+import type { SupportLanguage, doc } from "prettier";
+import { z } from "zod";
+import type { ZodType } from "zod";
 
 /**
  * Returns a function that returns the index of the value from the original array.

@@ -1,27 +1,22 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- Use prettier's version
-import {
-  type ArrayExpression,
-  type BooleanLiteral,
-  type NullLiteral,
-  type NumericLiteral,
-  type ObjectExpression,
-  type ObjectProperty,
-  type StringLiteral,
-  type TemplateElement,
-  type TemplateLiteral,
-  type UnaryExpression,
+import type {
+  ArrayExpression,
+  BooleanLiteral,
+  NullLiteral,
+  NumericLiteral,
+  ObjectExpression,
+  ObjectProperty,
+  StringLiteral,
+  TemplateElement,
+  TemplateLiteral,
+  UnaryExpression,
 } from "@babel/types";
 import { flow, fromPairs, map, pick } from "lodash/fp";
 import { doc } from "prettier";
 import originalPrinter from "prettier-raw/src/language-js/printer-estree-json";
 import { parsers } from "prettier/parser-babel";
 
-import {
-  type Stack,
-  keyByType,
-  plugin,
-  processStack,
-} from "@standard-configs/plugin";
+import { keyByType, plugin, processStack } from "@standard-configs/plugin";
+import type { Stack } from "@standard-configs/plugin";
 
 /* eslint-disable @typescript-eslint/no-use-before-define -- Recursive type definition */
 type JSONExpression =

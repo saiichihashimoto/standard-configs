@@ -149,10 +149,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "./packages/**"
-        ],
-        "peerDependencies": true,
+        "devDependencies": false,
         "packageDir": [
           ".",
           "./packages/config",
@@ -356,7 +353,7 @@
         "@typescript-eslint/switch-exhaustiveness-check": "error",
         "import/consistent-type-specifier-style": [
           "error",
-          "prefer-inline"
+          "prefer-top-level"
         ]
       }
     },
@@ -397,8 +394,6 @@
         "import/no-extraneous-dependencies": [
           "error",
           {
-            "devDependencies": true,
-            "peerDependencies": true,
             "packageDir": [
               ".",
               "./packages/config",

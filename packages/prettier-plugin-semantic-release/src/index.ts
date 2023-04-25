@@ -1,4 +1,5 @@
-import { type Config, indexOf } from "@standard-configs/config";
+import { indexOf } from "@standard-configs/config";
+import type { Config } from "@standard-configs/config";
 import { mergePlugins } from "@standard-configs/plugin";
 import { jsonPlugin } from "@standard-configs/plugin-json";
 import { yamlPlugin } from "@standard-configs/plugin-yaml";

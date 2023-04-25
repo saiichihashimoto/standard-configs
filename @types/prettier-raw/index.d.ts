@@ -1,5 +1,5 @@
 declare module 'prettier-raw/src/language-js/printer-estree-json' {
-    import { type Printer } from 'prettier';
+    import type { Printer } from 'prettier';
 
     const plugin: Printer;
 

@@ -1,4 +1,5 @@
-import { type Config, indexOf, nestConfig } from "@standard-configs/config";
+import { indexOf, nestConfig } from "@standard-configs/config";
+import type { Config } from "@standard-configs/config";
 import { jsonPlugin } from "@standard-configs/plugin-json";
 import { babelConfig } from "@standard-configs/prettier-plugin-babel";
 

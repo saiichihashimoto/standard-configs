@@ -2,13 +2,12 @@ import { flow, map, negate, startsWith, toPairs, uniqBy } from "lodash/fp";
 import { z } from "zod";
 
 import {
-  type Config,
-  type Operation,
   elementsZod,
   indexOf,
   nestConfig,
   sortAndUniqBy,
 } from "@standard-configs/config";
+import type { Config, Operation } from "@standard-configs/config";
 import { mergePlugins } from "@standard-configs/plugin";
 import { ignorePlugin } from "@standard-configs/plugin-ignore";
 import { jsonPlugin } from "@standard-configs/plugin-json";

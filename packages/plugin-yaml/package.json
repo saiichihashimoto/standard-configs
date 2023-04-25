@@ -5,11 +5,11 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
+    "@standard-configs/plugin": "0.0.0-development",
     "prettier-raw": "github:prettier/prettier#2.8.8"
   },
   "devDependencies": {
     "@standard-configs/config": "0.0.0-development",
-    "@standard-configs/plugin": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
     "prettier": "2.8.8",
     "yaml": "2.2.1"
