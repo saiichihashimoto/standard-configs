@@ -53,7 +53,12 @@ export default defineConfig(
   }) => ({
     entry: ["src/index.ts"],
     dts: true,
-    noExternal: ["@standard-configs"],
+    noExternal: [
+      "@standard-configs",
+      // FIXME need to inline prettier-raw and it's dependencies
+      "prettier-raw",
+      "semver",
+    ],
     skipNodeModulesBundle: true,
     watch:
       dts === false
