@@ -1,4 +1,5 @@
-import prettier, { type Plugin } from "prettier";
+import prettier from "prettier";
+import type { Plugin } from "prettier";
 import { stringify as YAMLStringify } from "yaml";
 
 export const formatYAML = (

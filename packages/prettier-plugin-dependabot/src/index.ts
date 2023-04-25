@@ -1,12 +1,8 @@
 import { sortBy } from "lodash/fp";
 import { z } from "zod";
 
-import {
-  type Config,
-  elementsZod,
-  indexOf,
-  sortAndUniqBy,
-} from "@standard-configs/config";
+import { elementsZod, indexOf, sortAndUniqBy } from "@standard-configs/config";
+import type { Config } from "@standard-configs/config";
 import { yamlPlugin } from "@standard-configs/plugin-yaml";
 
 const dependabotConfig: Config = {

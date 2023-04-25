@@ -1,10 +1,7 @@
 import { z } from "zod";
 
-import {
-  type Config,
-  elementsZod,
-  sortAndUniqBy,
-} from "@standard-configs/config";
+import { elementsZod, sortAndUniqBy } from "@standard-configs/config";
+import type { Config } from "@standard-configs/config";
 import { ignorePlugin } from "@standard-configs/plugin-ignore";
 
 const gitIgnoreConfig: Config = {

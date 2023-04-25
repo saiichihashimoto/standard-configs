@@ -1,23 +1,18 @@
 import { flow, fromPairs, map, pick } from "lodash/fp";
 import { doc } from "prettier";
 import { parsers } from "prettier/parser-yaml";
-// eslint-disable-next-line import/no-extraneous-dependencies -- Use prettier's version
-import {
-  type Document,
-  type FlowMappingItem,
-  type FlowSequenceItem,
-  type MappingItem,
-  type MappingValue,
-  type SequenceItem,
-  type YamlUnistNode,
+import type {
+  Document,
+  FlowMappingItem,
+  FlowSequenceItem,
+  MappingItem,
+  MappingValue,
+  SequenceItem,
+  YamlUnistNode,
 } from "yaml-unist-parser";
 
-import {
-  type Stack,
-  keyByType,
-  plugin,
-  processStack,
-} from "@standard-configs/plugin";
+import { keyByType, plugin, processStack } from "@standard-configs/plugin";
+import type { Stack } from "@standard-configs/plugin";
 
 import * as originalPrinter from "./printer-yaml";
 import { injectablePrint } from "./printer-yaml";

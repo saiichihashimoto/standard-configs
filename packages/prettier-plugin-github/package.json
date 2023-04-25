@@ -9,11 +9,11 @@
     "dev": "npm run build -- --no-dts"
   },
   "dependencies": {
+    "@standard-configs/config": "0.0.0-development",
+    "@standard-configs/plugin-yaml": "0.0.0-development",
     "toposort": "2.0.2"
   },
   "devDependencies": {
-    "@standard-configs/config": "0.0.0-development",
-    "@standard-configs/plugin-yaml": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
     "@types/toposort": "2.0.3",
     "prettier": "2.8.8"
