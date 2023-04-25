@@ -28,16 +28,13 @@ jobs:
           cache: "npm"
       - run: npm ci
 
-      - uses: actions/cache/restore@v3
+      - uses: actions/cache@v3
         with:
           path: node_modules/.cache/turbo
-          key: build-cache
+          key: build-cache-${{ github.sha }}
+          restore-keys: |
+            build-cache-${{ github.event.before }}
       - run: npm run build
-      - uses: actions/cache/save@v3
-        with:
-          path: node_modules/.cache/turbo
-          key: build-cache
-
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
