@@ -149,36 +149,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": false,
-        "packageDir": [
-          ".",
-          "./packages/config",
-          "./packages/plugin",
-          "./packages/plugin-ignore",
-          "./packages/plugin-json",
-          "./packages/plugin-yaml",
-          "./packages/prettier-plugin",
-          "./packages/prettier-plugin-ava",
-          "./packages/prettier-plugin-babel",
-          "./packages/prettier-plugin-bower",
-          "./packages/prettier-plugin-dependabot",
-          "./packages/prettier-plugin-eslint",
-          "./packages/prettier-plugin-firebase",
-          "./packages/prettier-plugin-git",
-          "./packages/prettier-plugin-git-hooks",
-          "./packages/prettier-plugin-github",
-          "./packages/prettier-plugin-npm",
-          "./packages/prettier-plugin-package-json",
-          "./packages/prettier-plugin-prettier",
-          "./packages/prettier-plugin-probot-auto-assign",
-          "./packages/prettier-plugin-probot-settings",
-          "./packages/prettier-plugin-sanity",
-          "./packages/prettier-plugin-semantic-release",
-          "./packages/prettier-plugin-tsconfig",
-          "./packages/prettier-plugin-tsup",
-          "./packages/prettier-plugin-vscode",
-          "./packages/tsconfig"
-        ]
+        "devDependencies": false
       }
     ],
     "import/no-mutable-exports": "error",
@@ -394,35 +365,7 @@
         "import/no-extraneous-dependencies": [
           "error",
           {
-            "packageDir": [
-              ".",
-              "./packages/config",
-              "./packages/plugin",
-              "./packages/plugin-ignore",
-              "./packages/plugin-json",
-              "./packages/plugin-yaml",
-              "./packages/prettier-plugin",
-              "./packages/prettier-plugin-ava",
-              "./packages/prettier-plugin-babel",
-              "./packages/prettier-plugin-bower",
-              "./packages/prettier-plugin-dependabot",
-              "./packages/prettier-plugin-eslint",
-              "./packages/prettier-plugin-firebase",
-              "./packages/prettier-plugin-git",
-              "./packages/prettier-plugin-git-hooks",
-              "./packages/prettier-plugin-github",
-              "./packages/prettier-plugin-npm",
-              "./packages/prettier-plugin-package-json",
-              "./packages/prettier-plugin-prettier",
-              "./packages/prettier-plugin-probot-auto-assign",
-              "./packages/prettier-plugin-probot-settings",
-              "./packages/prettier-plugin-sanity",
-              "./packages/prettier-plugin-semantic-release",
-              "./packages/prettier-plugin-tsconfig",
-              "./packages/prettier-plugin-tsup",
-              "./packages/prettier-plugin-vscode",
-              "./packages/tsconfig"
-            ]
+            "devDependencies": true
           }
         ],
         "jest/consistent-test-it": [
