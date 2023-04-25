@@ -17,7 +17,7 @@
     "@standard-configs/plugin-json": "0.0.0-development",
     "@standard-configs/plugin-yaml": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
-    "prettier": "2.8.7"
+    "prettier": "2.8.8"
   },
   "peerDependencies": {
     "prettier": "^2.8.4"

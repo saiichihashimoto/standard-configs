@@ -32,7 +32,7 @@
     "@standard-configs/prettier-plugin-tsup": "0.0.0-development",
     "@standard-configs/prettier-plugin-vscode": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
-    "prettier": "2.8.7"
+    "prettier": "2.8.8"
   },
   "peerDependencies": {
     "prettier": "^2.8.4"
