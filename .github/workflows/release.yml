@@ -40,7 +40,8 @@ jobs:
           path: node_modules/.cache/turbo
           key: build-cache-${{ github.sha }}
 
+      - run: npm config set workspaces-update false
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx multi-semantic-release --ignore-private-packages
+        run: npx multi-semantic-release --ignore-private-packages --deps.bump=ignore
