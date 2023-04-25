@@ -15,11 +15,11 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - run: npm ci
+
       - uses: actions/cache@v3
         with:
           path: node_modules/.cache/turbo
           key: build-cache
-
       - run: npm run build
   lint:
     name: Lint
@@ -33,11 +33,11 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - run: npm ci
+
       - uses: actions/cache/restore@v3
         with:
           path: node_modules/.cache/turbo
           key: build-cache
-
       - run: npm run lint
   test:
     name: Test
