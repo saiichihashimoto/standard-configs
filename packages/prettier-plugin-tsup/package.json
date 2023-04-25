@@ -11,7 +11,8 @@
   "dependencies": {
     "@standard-configs/config": "0.0.0-development",
     "@standard-configs/plugin-json": "0.0.0-development",
-    "@standard-configs/prettier-plugin-tsconfig": "0.0.0-development"
+    "@standard-configs/prettier-plugin-tsconfig": "0.0.0-development",
+    "zod": "3.21.4"
   },
   "devDependencies": {
     "@standard-configs/tsconfig": "0.0.0-development",

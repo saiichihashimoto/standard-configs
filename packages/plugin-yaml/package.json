@@ -6,6 +6,7 @@
   "types": "src/index.ts",
   "dependencies": {
     "@standard-configs/plugin": "0.0.0-development",
+    "lodash": "4.17.21",
     "prettier-raw": "github:prettier/prettier#2.8.8"
   },
   "devDependencies": {
