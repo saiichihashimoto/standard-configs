@@ -7,28 +7,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - uses: actions/setup-node@v3.6.0
-        with:
-          node-version-file: "package.json"
-          cache: "npm"
-      - run: npm ci
-
-      - uses: actions/cache@v3
-        with:
-          path: node_modules/.cache/turbo
-          key: build-cache-${{ github.sha }}
-          restore-keys: |
-            build-cache-${{ github.event.pull_request.base.sha }}
-      - run: npm run build
-  lint:
-    name: Lint
+  buildAndlint:
+    name: Build & Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -46,6 +26,12 @@ jobs:
           key: build-cache-${{ github.sha }}
           restore-keys: |
             build-cache-${{ github.event.pull_request.base.sha }}
+      - run: npm run build
+      - uses: actions/cache/save@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: build-cache-${{ github.sha }}
+
       - run: npm run lint
   test:
     name: Test
