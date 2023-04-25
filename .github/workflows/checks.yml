@@ -7,10 +7,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/cache@v3
-        with:
-          path: node_modules/.cache/turbo
-          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -19,16 +15,16 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - run: npm ci
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: build-cache
 
       - run: npm run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/cache@v3
-        with:
-          path: node_modules/.cache/turbo
-          key: build-cache
       - uses: actions/checkout@v3
         with:
           submodules: recursive
@@ -37,6 +33,10 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - run: npm ci
+      - uses: actions/cache/restore@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: build-cache
 
       - run: npm run lint
   test:
