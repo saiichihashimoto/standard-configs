@@ -8,6 +8,8 @@ on:
 permissions:
   contents: read
 
+concurrency: release
+
 jobs:
   release:
     name: Release
