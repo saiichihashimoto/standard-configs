@@ -1,5 +1,4 @@
 {
   "name": "@standard-configs/tsconfig",
-  "version": "0.0.0-development",
-  "private": true
+  "version": "0.0.0-development"
 }
