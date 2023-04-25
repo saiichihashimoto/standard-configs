@@ -11,7 +11,9 @@
   "dependencies": {
     "@standard-configs/config": "0.0.0-development",
     "@standard-configs/plugin-yaml": "0.0.0-development",
-    "toposort": "2.0.2"
+    "lodash": "4.17.21",
+    "toposort": "2.0.2",
+    "zod": "3.21.4"
   },
   "devDependencies": {
     "@standard-configs/tsconfig": "0.0.0-development",

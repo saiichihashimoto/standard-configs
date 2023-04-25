@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
+    "lodash": "4.17.21",
     "minimatch": "9.0.0"
   },
   "devDependencies": {

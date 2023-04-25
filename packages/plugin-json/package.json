@@ -6,12 +6,14 @@
   "types": "src/index.ts",
   "dependencies": {
     "@standard-configs/plugin": "0.0.0-development",
+    "lodash": "4.17.21",
     "prettier-raw": "github:prettier/prettier#2.8.8"
   },
   "devDependencies": {
     "@standard-configs/config": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
-    "prettier": "2.8.8"
+    "prettier": "2.8.8",
+    "zod": "3.21.4"
   },
   "peerDependencies": {
     "prettier": "^2.8.4"
