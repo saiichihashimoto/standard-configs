@@ -4,7 +4,7 @@ repository:
   description:
   homepage:
   topics:
-  private: true
+  private: false
   has_issues: true
   has_projects: false
   has_wiki: false
