@@ -27,5 +27,6 @@ jobs:
         with:
           token: ${{ secrets.CREATE_PULL_REQUEST_TOKEN }}
           commit-message: "fix(deps): npm-check-updates"
+          title: npm-check-updates
           labels: automerge
           assignees: saiichihashimoto
