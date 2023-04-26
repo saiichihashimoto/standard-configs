@@ -3,6 +3,7 @@ name: "NPM Update"
 on:
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   npm-update:
@@ -22,9 +23,8 @@ jobs:
       - run: npm install
 
       - uses: peter-evans/create-pull-request@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          token: ${{ secrets.CREATE_PULL_REQUEST_TOKEN }}
           commit-message: "fix(deps): npm update"
           labels: automerge
           assignees: saiichihashimoto
