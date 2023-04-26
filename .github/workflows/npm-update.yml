@@ -28,4 +28,3 @@ jobs:
           commit-message: "fix(deps): npm update"
           labels: automerge
           assignees: saiichihashimoto
-          reviewers: saiichihashimoto
