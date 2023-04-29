@@ -100,6 +100,7 @@ const probotSettingsConfig: Config = {
           "allow_squash_merge",
           "allow_merge_commit",
           "allow_rebase_merge",
+          "allow_auto_merge",
           "delete_branch_on_merge",
           "enable_automated_security_fixes",
           "enable_vulnerability_alerts",
