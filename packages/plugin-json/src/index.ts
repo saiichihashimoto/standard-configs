@@ -138,21 +138,20 @@ export const jsonPlugin = plugin<JSONNode>({
     print
   ) => {
     const {
-      builders: { hardline, indent, join, softline },
+      builders: { hardline, indent, join },
     } = doc;
 
     return keyByType<JSONNode, doc.builders.Doc | null>({
       ArrayExpression: ({ elements }) =>
         // https://github.com/prettier/prettier/blob/main/src/language-js/printer-estree-json.js#L13
-        // HACK Not sure why, but it seems to be using the logic from here instead: https://github.com/prettier/prettier/blob/2.8.8/src/language-js/print/array.js
         elements.length === 0
           ? null
           : [
               "[",
               indent([
-                softline,
+                hardline,
                 join(
-                  [",", softline],
+                  [",", hardline],
                   overArrayElements({
                     elements: elements.filter(
                       (element): element is Exclude<typeof element, null> =>
@@ -169,7 +168,7 @@ export const jsonPlugin = plugin<JSONNode>({
                   })
                 ),
               ]),
-              softline,
+              hardline,
               "]",
             ],
       ObjectExpression: ({ properties }) =>
