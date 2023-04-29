@@ -12,5 +12,15 @@
     "^[./]"
   ],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "overrides": [
+    {
+      "files": [
+        ".releaserc"
+      ],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
 }
