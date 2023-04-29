@@ -1,5 +1,5 @@
 {
-    "name": "@types/prettier-raw",
-    "version": "0.0.0-development",
-    "private": true
+  "name": "@types/prettier-raw",
+  "version": "0.0.0-development",
+  "private": true
 }

@@ -1,9 +1,9 @@
-declare module 'prettier-raw/src/language-js/printer-estree-json' {
-    import type { Printer } from 'prettier';
+declare module "prettier-raw/src/language-js/printer-estree-json" {
+  import type { Printer } from "prettier";
 
-    const plugin: Printer;
+  const plugin: Printer;
 
-    export = plugin;
+  export = plugin;
 }
 
 // declare module 'prettier-raw/src/language-yaml/printer-yaml' {
