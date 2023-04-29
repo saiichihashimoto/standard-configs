@@ -36,6 +36,7 @@ jobs:
 
       # If `npm run lint` succeeds then, theoretically, running prettier without this plugin should not change anything.
       - run: npx prettier --write --config ./.prettierrc-without .
+      - run: npx prettier --write --config ./@types/.prettierrc-without ./@types
       - run: git diff-index --quiet HEAD -- || (git -c color.ui=always diff && exit 1)
   test:
     name: Test
