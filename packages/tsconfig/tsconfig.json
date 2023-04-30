@@ -2,19 +2,13 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": "./src",
     "paths": {
-      "@standard-configs/*": [
-        "../../*/src"
-      ]
+      "@standard-configs/*": ["../../*/src"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
