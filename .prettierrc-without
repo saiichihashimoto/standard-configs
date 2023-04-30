@@ -1,23 +1,14 @@
 {
   "$schema": "http://json.schemastore.org/prettierrc",
   "pluginSearchDirs": false,
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-sh"
-  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-sh"],
   "quoteProps": "consistent",
-  "importOrder": [
-    "^@standard-configs/(.*)$",
-    "^src/(.*)$",
-    "^[./]"
-  ],
+  "importOrder": ["^@standard-configs/(.*)$", "^src/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "overrides": [
     {
-      "files": [
-        ".releaserc"
-      ],
+      "files": [".releaserc"],
       "options": {
         "parser": "json"
       }

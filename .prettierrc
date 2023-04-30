@@ -12,6 +12,12 @@
   "importOrderSortSpecifiers": true,
   "overrides": [
     {
+      "files": [".releaserc"],
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
       "files": ["*ignore"],
       "options": {
         "parser": "ignore"
