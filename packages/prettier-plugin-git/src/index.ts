@@ -5,7 +5,7 @@ import type { Config } from "@standard-configs/config";
 import { ignorePlugin } from "@standard-configs/plugin-ignore";
 
 const gitIgnoreConfig: Config = {
-  parsers: ["ignore"],
+  parsers: ["sh"],
   operations: [
     {
       path: /^$/,

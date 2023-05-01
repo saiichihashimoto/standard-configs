@@ -15,7 +15,7 @@ import { yamlPlugin } from "@standard-configs/plugin-yaml";
 import { babelConfig } from "@standard-configs/prettier-plugin-babel";
 
 export const eslintIgnoreConfig: Config = {
-  parsers: ["ignore"],
+  parsers: ["sh"],
   operations: [
     {
       path: /^$/,

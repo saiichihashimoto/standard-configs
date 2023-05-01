@@ -66,8 +66,8 @@ export const prettierConfig: Config = {
   ],
 };
 
-export const prettierIgnoreConfig: Config = {
-  parsers: ["ignore"],
+const prettierIgnoreConfig: Config = {
+  parsers: ["sh"],
   operations: [
     {
       path: /^$/,
@@ -80,7 +80,7 @@ export const prettierIgnoreConfig: Config = {
 };
 
 export const prettierIgnoreConfigs = {
-  ".prettierignore": { ...prettierIgnoreConfig, parsers: ["ignore"] },
+  ".prettierignore": prettierIgnoreConfig,
 };
 
 export const prettierJSONConfigs = {
