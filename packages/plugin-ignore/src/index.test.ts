@@ -8,7 +8,7 @@ import { formatIgnore } from "./test-utils";
 
 const plugin = ignorePlugin({
   ".knownignore": {
-    parsers: ["ignore"],
+    parsers: ["sh"],
     operations: [
       {
         path: /^$/,
@@ -28,7 +28,7 @@ describe.each([{ filename: ".unknownignore", format: formatIgnore }])(
   "%p",
   ({ filename, format }) => {
     const { defaultFormat, pluginFormat } = format(filename, plugin, {
-      parser: "ignore",
+      parser: "sh",
     });
 
     it("leaves unknown configs alone", () =>

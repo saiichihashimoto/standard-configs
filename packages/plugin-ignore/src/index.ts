@@ -44,14 +44,14 @@ export const pureIgnorePlugin: Plugin<IgnoreNode> = {
     {
       name: "IgnoreFile",
       since: "0.1.0",
-      parsers: ["ignore"],
+      parsers: ["sh"],
       extensions: [".*ignore"],
       filenames: [".*ignore"],
       vscodeLanguageIds: ["ignore"],
     },
   ],
   parsers: {
-    ignore: {
+    sh: {
       astFormat: "ignore",
       locStart: ({
         position: {
