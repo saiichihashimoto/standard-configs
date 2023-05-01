@@ -3,16 +3,16 @@
   "name": "@standard-configs/monorepo",
   "workspaces": ["@types/*", "packages/*"],
   "scripts": {
-    "build": "cross-env FORCE_COLOR=1 turbo run build --continue",
+    "build": "turbo run build --color --continue",
     "dev": "concurrently --prefix-colors \"auto\" npm:dev:*",
-    "dev:build": "cross-env FORCE_COLOR=1 turbo run dev --parallel",
-    "dev:test": "jest --watch",
+    "dev:build": "turbo run dev --color --parallel --concurrency 50",
+    "dev:test": "npm run test --watch",
     "prelint": "npm run build",
     "lint": "git add . && cross-env NO_FIX=1 lint-staged --shell --verbose --no-stash --diff \"4b825dc642cb6eb9a060e54bf8d69288fbee4904\"",
     "prepare": "is-ci || concurrently --timings --prefix-colors \"auto\" npm:prepare:*",
     "prepare:brew": "brew bundle",
     "prepare:husky": "husky install",
-    "test": "jest"
+    "test": "jest --color"
   },
   "dependencies": {
     "@manypkg/cli": "0.20.0",
