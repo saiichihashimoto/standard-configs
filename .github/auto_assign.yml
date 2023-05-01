@@ -1,2 +1,2 @@
 # https://github.com/kentaro-m/auto-assign
-addAssignees: author
+_extends: .github

@@ -1,28 +1,7 @@
 # https://github.com/repository-settings/app
+_extends: .github
 repository:
   name: standard-configs
-  description:
-  homepage:
-  topics:
-  private: false
-  has_issues: true
-  has_projects: false
-  has_wiki: false
-  default_branch: main
-  allow_squash_merge: false
-  allow_merge_commit: true
-  allow_rebase_merge: false
-  delete_branch_on_merge: true
-  enable_automated_security_fixes: false
-  enable_vulnerability_alerts: true
-labels:
-  - name: released
-  - name: automerge
-    color: "#8250df"
-    description: Automatically merges the PR if all status checks pass.
-  - name: dependabot
-    color: "#0365d6"
-    description: Automatically generated PRs that update dependency versions
 branches:
   - name: main
     protection:
