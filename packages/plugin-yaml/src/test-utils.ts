@@ -1,6 +1,13 @@
 import prettier from "prettier";
-import type { Plugin } from "prettier";
+import type { Options, Plugin } from "prettier";
 import { stringify as YAMLStringify } from "yaml";
+
+const commonOptions = ({ filename }: { filename: string }): Options => ({
+  filepath: `/some/file/path/${filename}`,
+  pluginSearchDirs: false,
+  // The error diffs are very nice when everything attempts to print on it's own line
+  printWidth: 1,
+});
 
 export const formatYAML = (
   filename: string,
@@ -16,29 +23,25 @@ export const formatYAML = (
 ) => ({
   defaultFormat: (source: unknown) =>
     prettier.format(stringify(source), {
+      ...commonOptions({ filename }),
       parser,
-      filepath: `/some/file/path/${filename}`,
-      pluginSearchDirs: false,
       plugins: [],
     }),
   pluginFormat: (source: unknown) =>
     prettier.format(stringify(source), {
-      filepath: `/some/file/path/${filename}`,
-      pluginSearchDirs: false,
+      ...commonOptions({ filename }),
       plugins: [plugin],
     }),
   expectExample: (source: unknown, defaultSource = source) =>
     expect(
       prettier.format(stringify(source), {
-        filepath: `/some/file/path/${filename}`,
-        pluginSearchDirs: false,
+        ...commonOptions({ filename }),
         plugins: [plugin],
       })
     ).toStrictEqual(
       prettier.format(stringify(defaultSource), {
+        ...commonOptions({ filename }),
         parser,
-        filepath: `/some/file/path/${filename}`,
-        pluginSearchDirs: false,
         plugins: [],
       })
     ),
