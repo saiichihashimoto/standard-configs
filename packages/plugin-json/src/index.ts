@@ -138,7 +138,7 @@ export const jsonPlugin = plugin<JSONNode>({
     print
   ) => {
     const {
-      builders: { hardline, indent, join },
+      builders: { group, hardline, indent, join, line, softline },
     } = doc;
 
     return keyByType<JSONNode, doc.builders.Doc | null>({
@@ -146,12 +146,12 @@ export const jsonPlugin = plugin<JSONNode>({
         // https://github.com/prettier/prettier/blob/main/src/language-js/printer-estree-json.js#L13
         elements.length === 0
           ? null
-          : [
+          : group([
               "[",
               indent([
-                hardline,
+                softline,
                 join(
-                  [",", hardline],
+                  [",", line],
                   overArrayElements({
                     elements: elements.filter(
                       (element): element is Exclude<typeof element, null> =>
@@ -168,9 +168,9 @@ export const jsonPlugin = plugin<JSONNode>({
                   })
                 ),
               ]),
-              hardline,
+              softline,
               "]",
-            ],
+            ]),
       ObjectExpression: ({ properties }) =>
         // https://github.com/prettier/prettier/blob/main/src/language-js/printer-estree-json.js#L30
         properties.length === 0
