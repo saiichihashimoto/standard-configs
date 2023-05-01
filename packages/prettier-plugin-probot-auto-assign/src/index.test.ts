@@ -121,5 +121,10 @@ describe.each([{ filename: ".github/auto_assign.yml", format: formatYAML }])(
         # A list of keywords to be skipped the process that add reviewers if pull requests include it
         # skipKeywords:
         #   - wip`));
+
+    it("_extends before everything", () =>
+      expectExample(`
+        _extends: someone
+        addReviewers: true`));
   }
 );

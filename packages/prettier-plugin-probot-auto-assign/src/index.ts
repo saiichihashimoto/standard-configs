@@ -11,6 +11,7 @@ const probotAutoAssignConfig: Config = {
       path: /^$/,
       sortKeys: [
         indexOf([
+          "_extends",
           "addReviewers",
           "addAssignees",
           "reviewers",
