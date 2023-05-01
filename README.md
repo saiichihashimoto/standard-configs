@@ -19,6 +19,7 @@ We sort objects with this order of precedence:
 
 <!-- TODO .env* -->
 <!-- TODO .gitattributes https://git-scm.com/docs/gitattributes -->
+<!-- TODO .kodiak.toml https://kodiakhq.com/docs/config-reference -->
 <!-- TODO .npmrc https://docs.npmjs.com/cli/v8/configuring-npm/npmrc -->
 <!-- TODO Brewfile https://gist.github.com/mattmc3/e64c58073d6cd64692561d0843ea8ad3 -->
 <!-- TODO gql-codegen.yml -->
