@@ -1,5 +1,3 @@
 {
-  "prettier.documentSelectors": [
-    "**/*"
-  ]
+  "prettier.documentSelectors": ["**/*"]
 }

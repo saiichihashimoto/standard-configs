@@ -12,6 +12,7 @@ import type {
 } from "@babel/types";
 import { flow, fromPairs, map, pick } from "lodash/fp";
 import { doc } from "prettier";
+import type { AstPath, ParserOptions } from "prettier";
 import originalPrinter from "prettier-raw/src/language-js/printer-estree-json";
 import { parsers } from "prettier/parser-babel";
 
@@ -122,57 +123,75 @@ const getStackPath: ReturnType<typeof processStack<JSONNode, JSONStack>> =
     }
   );
 
-// https://github.com/prettier/prettier/blob/main/src/language-js/index.js
+const {
+  builders: { group, hardline, indent, join, line, softline },
+} = doc;
+
+// HACK Until we figure out how arrays are actually printed, this is the closest to matching the actual output
+const softPrintArrayElements = (docs: doc.builders.Doc[]) =>
+  docs.length === 0
+    ? "[]"
+    : group(["[", indent([softline, join([",", line], docs)]), softline, "]"]);
+
+// https://github.com/prettier/prettier/blob/2.8.8/src/language-js/index.js
 export const jsonPlugin = plugin<JSONNode>({
   getNodeValue,
   getStackPath,
-  originalPrinter,
+  originalPrinter: {
+    ...originalPrinter,
+    print: (
+      astPath: AstPath<JSONNode>,
+      options: ParserOptions<JSONNode>,
+      print: (path: AstPath<JSONNode>) => doc.builders.Doc,
+      args?: unknown
+    ) => {
+      const node = astPath.getNode();
+
+      return node?.type !== "ArrayExpression"
+        ? originalPrinter.print(astPath, options, print, args)
+        : softPrintArrayElements(
+            astPath.map(
+              () =>
+                astPath.getValue() === null
+                  ? "null"
+                  : // TODO Override Printer['print'] to allow no params
+                    (print as () => doc.builders.Doc)(),
+              "elements"
+            )
+          );
+    },
+  },
   astFormat: "estree-json",
-  // https://github.com/prettier/prettier/blob/main/src/language-js/parse/json.js#L134
+  // https://github.com/prettier/prettier/blob/2.8.8/src/language-js/parse/json.js#L134
   parsers: pick(["json", "json5", "json-stringify"], parsers),
-  // https://github.com/prettier/prettier/blob/main/src/language-js/printer-estree-json.js
+  // https://github.com/prettier/prettier/blob/2.8.8/src/language-js/printer-estree-json.js
   print: (
     { node, overArrayElements, overObjectProperties },
     astPath,
     options,
     print
-  ) => {
-    const {
-      builders: { hardline, indent, join },
-    } = doc;
-
-    return keyByType<JSONNode, doc.builders.Doc | null>({
+  ) =>
+    keyByType<JSONNode, doc.builders.Doc | null>({
       ArrayExpression: ({ elements }) =>
-        // https://github.com/prettier/prettier/blob/main/src/language-js/printer-estree-json.js#L13
-        elements.length === 0
-          ? null
-          : [
-              "[",
-              indent([
-                hardline,
-                join(
-                  [",", hardline],
-                  overArrayElements({
-                    elements: elements.filter(
-                      (element): element is Exclude<typeof element, null> =>
-                        element !== null
-                    ),
-                    docs: astPath.map(
-                      () =>
-                        astPath.getValue() === null
-                          ? "null"
-                          : // TODO Override Printer['print'] to allow no params
-                            (print as () => doc.builders.Doc)(),
-                      "elements"
-                    ),
-                  })
-                ),
-              ]),
-              hardline,
-              "]",
-            ],
+        // https://github.com/prettier/prettier/blob/2.8.8/src/language-js/printer-estree-json.js#L13
+        softPrintArrayElements(
+          overArrayElements({
+            elements: elements.filter(
+              (element): element is Exclude<typeof element, null> =>
+                element !== null
+            ),
+            docs: astPath.map(
+              () =>
+                astPath.getValue() === null
+                  ? "null"
+                  : // TODO Override Printer['print'] to allow no params
+                    (print as () => doc.builders.Doc)(),
+              "elements"
+            ),
+          })
+        ),
       ObjectExpression: ({ properties }) =>
-        // https://github.com/prettier/prettier/blob/main/src/language-js/printer-estree-json.js#L30
+        // https://github.com/prettier/prettier/blob/2.8.8/src/language-js/printer-estree-json.js#L30
         properties.length === 0
           ? null
           : [
@@ -191,6 +210,5 @@ export const jsonPlugin = plugin<JSONNode>({
               hardline,
               "}",
             ],
-    })(node);
-  },
+    })(node),
 });
