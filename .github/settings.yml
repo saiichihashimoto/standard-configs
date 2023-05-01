@@ -1,6 +1,7 @@
 # https://github.com/repository-settings/app
 repository:
   name: standard-configs
+  private: false
 branches:
   - name: main
     protection:
