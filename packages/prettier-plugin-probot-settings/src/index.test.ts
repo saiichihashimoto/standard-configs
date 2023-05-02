@@ -170,5 +170,11 @@ describe.each([{ filename: ".github/settings.yml", format: formatYAML }])(
                 apps: []
                 users: []
                 teams: []`));
+
+    it("puts _extends before everything", () =>
+      expectExample(`
+        _extends: .github
+        repository:
+          name: repo-name`));
   }
 );
