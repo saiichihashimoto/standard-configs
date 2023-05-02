@@ -1,4 +1,5 @@
 # https://github.com/repository-settings/app
+_extends: .github
 repository:
   name: standard-configs
   private: false
@@ -9,4 +10,3 @@ branches:
         contexts:
           - Build & Lint
           - Test
-_extends: .github

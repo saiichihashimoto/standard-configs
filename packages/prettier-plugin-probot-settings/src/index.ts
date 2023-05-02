@@ -19,6 +19,7 @@ const probotSettingsConfig: Config = {
       path: /^$/,
       sortKeys: [
         indexOf([
+          "_extends",
           "repository",
           "labels",
           "milestones",
