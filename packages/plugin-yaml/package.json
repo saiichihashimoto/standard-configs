@@ -13,7 +13,7 @@
     "@standard-configs/config": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
     "prettier": "2.8.8",
-    "yaml": "2.2.2",
+    "yaml": "2.3.0",
     "zod": "3.21.4"
   },
   "peerDependencies": {
