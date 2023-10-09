@@ -13,7 +13,7 @@ concurrency: checks-${{ github.ref == 'refs/heads/main' && 'main' || github.even
 
 jobs:
   build:
-    name: Build
+    name: Build & Lint
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -166,30 +166,6 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
         run: npm run build
 
-      - run: npm config set workspaces-update false
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx multi-semantic-release --ignore-private-packages
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - uses: actions/setup-node@v3.8.1
-        with:
-          node-version-file: "package.json"
-          cache: "npm"
-      - id: node-modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            packages/*/node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
-
       - uses: actions/cache@v3
         with:
           path: .eslintcache
@@ -209,6 +185,12 @@ jobs:
             git --no-pager diff --text HEAD
             exit 1
           fi
+
+      - run: npm config set workspaces-update false
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx multi-semantic-release --ignore-private-packages
   test:
     name: Test
     runs-on: ubuntu-latest

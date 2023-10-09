@@ -8,6 +8,5 @@ branches:
     protection:
       required_status_checks:
         contexts:
-          - Build
-          - Lint
+          - Build & Lint
           - Test
