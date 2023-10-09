@@ -179,6 +179,7 @@ jobs:
           restore-keys: |
             prettier-
 
+      - run: sudo apt-get install moreutils
       - run: npm run lint
       - run: |
           if [[ $(git status --porcelain) != "" ]]; then
