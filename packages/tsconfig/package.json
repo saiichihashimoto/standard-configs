@@ -1,4 +1,11 @@
 {
   "name": "@standard-configs/tsconfig",
-  "version": "0.0.0-development"
+  "version": "0.0.0-development",
+  "private": true,
+  "bugs": "https://github.com/saiichihashimoto/standard-configs/issues",
+  "repository": "github:saiichihashimoto/standard-configs",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/saiichihashimoto"
+  }
 }
