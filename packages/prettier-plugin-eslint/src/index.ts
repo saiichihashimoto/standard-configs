@@ -103,7 +103,7 @@ const rootConfig: Config = {
         typeof val === "number"
           ? { 0: '"off"', 1: '"warn"', 2: '"error"' }[val]
           : !Number.isNaN(Number(val))
-          ? // FIXME using quotes isn't based on the input being a string, it's based on the parser, which we need to identify (somehow)
+          ? // TODO using quotes isn't based on the input being a string, it's based on the parser, which we need to identify (somehow)
             { 0: "off", 1: "warn", 2: "error" }[Number(val)]
           : undefined,
     },

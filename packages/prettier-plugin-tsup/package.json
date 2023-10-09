@@ -2,6 +2,12 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@standard-configs/prettier-plugin-tsup",
   "version": "0.0.0-development",
+  "bugs": "https://github.com/saiichihashimoto/standard-configs/issues",
+  "repository": "github:saiichihashimoto/standard-configs",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/saiichihashimoto"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
