@@ -179,7 +179,10 @@ jobs:
           restore-keys: |
             prettier-
 
-      - run: sudo apt-get install moreutils
+      - uses: awalsh128/cache-apt-pkgs-action@v1
+        with:
+          packages: moreutils
+          version: 1.0
       - run: npm run lint
       - run: |
           if [[ $(git status --porcelain) != "" ]]; then
