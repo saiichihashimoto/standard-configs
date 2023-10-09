@@ -220,7 +220,32 @@ jobs:
     strategy:
       matrix:
         package:
-          [client, client-mock, faker, groq, groq-js, test-utils, types, zod]
+          [
+            config,
+            plugin-ignore,
+            plugin-json,
+            plugin-yaml,
+            prettier-plugin,
+            prettier-plugin-ava,
+            prettier-plugin-babel,
+            prettier-plugin-bower,
+            prettier-plugin-dependabot,
+            prettier-plugin-eslint,
+            prettier-plugin-firebase,
+            prettier-plugin-git,
+            prettier-plugin-git-hooks,
+            prettier-plugin-github,
+            prettier-plugin-npm,
+            prettier-plugin-package-json,
+            prettier-plugin-prettier,
+            prettier-plugin-probot-auto-assign,
+            prettier-plugin-probot-settings,
+            prettier-plugin-sanity,
+            prettier-plugin-semantic-release,
+            prettier-plugin-tsconfig,
+            prettier-plugin-tsup,
+            prettier-plugin-vscode,
+          ]
     steps:
       - uses: actions/checkout@v4
         with:

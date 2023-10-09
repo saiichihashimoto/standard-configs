@@ -10,4 +10,27 @@ branches:
         contexts:
           - Build
           - Lint
-          - Test
+          - Test (config)
+          - Test (plugin-ignore)
+          - Test (plugin-json)
+          - Test (plugin-yaml)
+          - Test (prettier-plugin)
+          - Test (prettier-plugin-ava)
+          - Test (prettier-plugin-babel)
+          - Test (prettier-plugin-bower)
+          - Test (prettier-plugin-dependabot)
+          - Test (prettier-plugin-eslint)
+          - Test (prettier-plugin-firebase)
+          - Test (prettier-plugin-git)
+          - Test (prettier-plugin-git-hooks)
+          - Test (prettier-plugin-github)
+          - Test (prettier-plugin-npm)
+          - Test (prettier-plugin-package-json)
+          - Test (prettier-plugin-prettier)
+          - Test (prettier-plugin-probot-auto-assign)
+          - Test (prettier-plugin-probot-settings)
+          - Test (prettier-plugin-sanity)
+          - Test (prettier-plugin-semantic-release)
+          - Test (prettier-plugin-tsconfig)
+          - Test (prettier-plugin-tsup)
+          - Test (prettier-plugin-vscode)
