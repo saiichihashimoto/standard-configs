@@ -19,7 +19,7 @@
     "@standard-configs/config": "0.0.0-development",
     "@standard-configs/tsconfig": "0.0.0-development",
     "prettier": "2.8.8",
-    "zod": "3.21.4"
+    "zod": "3.22.4"
   },
   "peerDependencies": {
     "prettier": "^2.8.4"
