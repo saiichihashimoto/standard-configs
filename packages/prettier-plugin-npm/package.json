@@ -18,7 +18,7 @@
     "@standard-configs/config": "0.0.0-development",
     "@standard-configs/plugin-ignore": "0.0.0-development",
     "lodash": "4.17.21",
-    "zod": "3.21.4"
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@standard-configs/tsconfig": "0.0.0-development",
