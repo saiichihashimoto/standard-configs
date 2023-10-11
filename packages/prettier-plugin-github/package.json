@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@standard-configs/tsconfig": "0.0.0-development",
-    "@types/toposort": "2.0.3",
+    "@types/toposort": "2.0.4",
     "prettier": "2.8.8"
   },
   "peerDependencies": {
