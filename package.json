@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@manypkg/cli": "0.21.0",
-    "@total-typescript/ts-reset": "0.4.2",
+    "@total-typescript/ts-reset": "0.5.1",
     "@trivago/prettier-plugin-sort-imports": "4.2.0",
     "@types/jest": "29.5.2",
     "@types/lint-staged": "13.2.0",
@@ -54,8 +54,8 @@
     "prettier-plugin-sh": "0.12.8",
     "ts-jest": "29.1.1",
     "ts-node": "10.9.1",
-    "tsup": "7.1.0",
-    "turbo": "1.10.6",
+    "tsup": "7.2.0",
+    "turbo": "1.10.15",
     "typescript": "5.2.2"
   },
   "engines": {
