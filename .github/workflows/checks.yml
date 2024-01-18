@@ -30,7 +30,7 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - id: node-modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -81,83 +81,83 @@ jobs:
           echo "HASH_PRETTIER_PLUGIN_TSCONFIG=$HASH_PRETTIER_PLUGIN_TSCONFIG" >> $GITHUB_ENV
           echo "HASH_PRETTIER_PLUGIN_TSUP=$HASH_PRETTIER_PLUGIN_TSUP" >> $GITHUB_ENV
           echo "HASH_PRETTIER_PLUGIN_VSCODE=$HASH_PRETTIER_PLUGIN_VSCODE" >> $GITHUB_ENV
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_AVA }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_AVA }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_BABEL }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_BABEL }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_BOWER }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_BOWER }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_DEPENDABOT }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_DEPENDABOT }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_ESLINT }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_ESLINT }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_FIREBASE }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_FIREBASE }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_GIT }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_GIT }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_GIT_HOOKS }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_GIT_HOOKS }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_GITHUB }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_GITHUB }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_NPM }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_NPM }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_PACKAGE_JSON }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_PACKAGE_JSON }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_PRETTIER }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_PRETTIER }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_PROBOT_AUTO_ASSIGN }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_PROBOT_AUTO_ASSIGN }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_PROBOT_SETTINGS }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_PROBOT_SETTINGS }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_SANITY }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_SANITY }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_SEMANTIC_RELEASE }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_SEMANTIC_RELEASE }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_TSCONFIG }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_TSCONFIG }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_TSUP }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_TSUP }}
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/turbo/${{ env.HASH_PRETTIER_PLUGIN_VSCODE }}*
           key: turbo-cache-${{ env.HASH_PRETTIER_PLUGIN_VSCODE }}
@@ -166,13 +166,13 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
         run: npm run build
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: .eslintcache
           key: eslint-${{ github.run_id }}
           restore-keys: |
             eslint-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.cache/prettier/.prettier-cache
           key: prettier-${{ github.run_id }}
@@ -207,7 +207,7 @@ jobs:
           node-version-file: "package.json"
           cache: "npm"
       - id: node-modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -221,7 +221,7 @@ jobs:
       - run: |
           JEST_CACHE_DIRECTORY=$(npx jest --color --showConfig | jq --raw-output ".configs[0].cacheDirectory")
           echo "JEST_CACHE_DIRECTORY=$JEST_CACHE_DIRECTORY" >> $GITHUB_ENV
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ${{ env.JEST_CACHE_DIRECTORY }}
           key: jest-${{ github.run_id }}
