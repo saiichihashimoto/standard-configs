@@ -27,7 +27,7 @@
     "@types/jest": "29.5.2",
     "@types/lint-staged": "13.2.0",
     "@types/lodash": "4.14.199",
-    "@typescript-eslint/eslint-plugin": "6.7.5",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
     "concurrently": "8.2.1",
     "cross-env": "7.0.3",
     "eslint": "8.51.0",
