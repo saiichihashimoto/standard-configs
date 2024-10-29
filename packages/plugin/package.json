@@ -12,7 +12,7 @@
   "types": "src/index.ts",
   "dependencies": {
     "lodash": "4.17.21",
-    "minimatch": "9.0.3"
+    "minimatch": "10.0.1"
   },
   "devDependencies": {
     "@standard-configs/config": "0.0.0-development",
