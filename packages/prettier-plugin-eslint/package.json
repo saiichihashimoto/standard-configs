@@ -22,7 +22,7 @@
     "@standard-configs/plugin-yaml": "0.0.0-development",
     "@standard-configs/prettier-plugin-babel": "0.0.0-development",
     "lodash": "4.17.21",
-    "zod": "3.22.4"
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@standard-configs/tsconfig": "0.0.0-development",
